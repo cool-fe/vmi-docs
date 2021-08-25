@@ -53,6 +53,7 @@ if [ -n "${ACCESS_TOKEN_DEPLOY}" ]; then
     echo "${ACCESS_TOKEN_DEPLOY}" >"${SSH_DIR}/id_rsa"
     chmod 400 "${SSH_DIR}/id_rsa"
     remote_repo="git@github.com:${PUBLISH_REPOSITORY}.git"
+    echo "remote_repo: ${remote_repo}"
 fi
 
 # 跳过配置personal_token 和 github_token
