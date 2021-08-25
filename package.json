@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "dumi build",
+    "dev": "dumi dev",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "node scripts/verifyCommit.js"
+  },
+  "lint-staged": {
+    "*.{jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "devDependencies": {
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.3.0",
+    "prettier-plugin-organize-imports": "^2.1.0",
+    "umi-plugin-hire": "^1.0.3",
+    "yorkie": "^2.0.0",
+    "dumi": "^1.0.13",
+    "@umijs/utils":"^3.5.17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umijs/umi.git"
+  }
+}
