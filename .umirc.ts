@@ -86,6 +86,8 @@ export default defineConfig({
     : {
         ssr: {},
       }),
+  // base:'/vmi-docs',
+  publicPath:"/vmi-docs/",
   favicon: 'https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg',
   mode: 'site',
   title: 'Winex',
